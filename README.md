@@ -1,4 +1,4 @@
-# Sistema-web-calendario v2
+# Sistema-web-calendario
 
 ####### OBS
 
@@ -17,19 +17,22 @@ Esse é um sistema web com o propósito de agendar os compromissos das pessoas a
 - CSS
 - JAVASCRIPT
 - NODE.js
-- JSON
 
 # Framework
 - Express.js
 
 # Características e Funcionalidades
 
-- cadastro
-- login
-- eventos com javascript
-- agendamento de eventos
-- responsividade
-- modificação de arquivos json
+- Cadastro
+- Login
+- Autentificação dos dados
+- Utilização de rotas para controlar como será o fluxo da aplicação
+- Implementação de Sessões e Cookies
+- Eventos com javascript
+- Agendamento de eventos
+- Validação de formulários
+- Responsividade
+- Utilização do banco de dados MySQL
 
 # Imagens
 
@@ -48,27 +51,35 @@ Esse é um sistema web com o propósito de agendar os compromissos das pessoas a
 
 1°: Abrir o Vscode e selecionar a pasta;
 
-2°: Vá até esse link https://fullcalendar.io/docs/initialize-globals e clique em download para baixar. Depois do download, extrai-a o arquivo. Depois da extraçãoe, mude o nome da pasta gerada para fullcalendar; 
+2°: Vá até esse link https://fullcalendar.io/docs/initialize-globals e clique em download para baixar. Depois do download, extraia o arquivo. Depois da extração, mude o nome da pasta gerada para fullcalendar e adicione essa pasta em public; 
 
-3°: Na pasta do projeto crie uma pasta chamada public e adicione somente as outras pastas, para ficar desse jeito:
+3°: Depois disso, vá até o terminal e digite: npm init. Após isso você configura o seu package.json com as suas preferências para poder salvá-lo;
 
-![pasta1](https://user-images.githubusercontent.com/68081476/176587616-020bacd3-bc7d-4411-9997-9e4abd657d49.png)
+4°: Com o package.json configurado, abra o terminal e digite o seguinte comando para instalar todas as dependências necessárias: npm intall express ejs express-session mysql2 nodemon connect-flash;
 
-![pasta2](https://user-images.githubusercontent.com/68081476/176587622-90e309b6-162c-4393-b638-ec40b4219c1b.png)
+5° Após as depêndencias serem instaladas, vá no package.json e em scripts adicione: "start": "nodemon server.js" e salve o arquivo. Agora todo vez que quiser rodar o servidor, basta abrir o terminal e digitar : 'npm run start' ou 'npm start';
 
+6°: Digite 'npm run start' ou 'npm start' no terminal para rodar o servidor;
 
-4°: Depois de escolher, ir até o terminal e digite: npm init. Após isso você configura com as suas preferências, e no final notará a criação de um package.json na sua pasta;
+7°: No seu navegador digite na url: localhost:8000
 
-5° Instalar o express no terminal, e para isso digita-se no terminal: npm install express. Você notará que haverá novos arquivos no seu diretório;
-
-6°: Instalar o nodemon para o servidor receber atualizações sem ter que parar: npm install -g nodemon;
-
-7° Após o nodemon ser instalado, vá no package.json e em scripts adicione: "start": "nodemon server.js". Agora todo vez que quiser rodar o servidor, basta abrir o terminal e digitar : npm run start;
-
-8°: Digite npm run start no terminal para rodar o servidor;
-
-9°: No seu navegador digite na url: localhost:8000
-
+8°: Utilize a aplicação e sinta-se livre para contribuir para o projeto
 # Como utilizar
 
-Basta fazer o cadastro e ir para página de login. Depois de ter o login aceito, você irá para uma página com calendário. A partir daí basta clicar em um dia e definir as informações para agendar um evento.
+1°: Vá na página de Cadastro clicando no link abaixo da página de login.
+
+2°: Insira as suas informações e clique no botão para salvar para ser redirecionado para a página de Login
+
+3°: Na página de login, insira as suas informações para logar
+
+4°: Na página de agendamento, quando você clicar em um dia no calendário, você verá um formulário para agendar um evento pessoal. Depois de preencher os campos, basta clicar em salvar e no final da página você verá que o evento que
+você agendou está lá. Se não quiser salvar um novo evento basta clicar em cancelar.
+
+5°: Quando quiser fazer o logout, basta clicar no botão 'X'.
+
+# Sobre a sua Sessão
+
+- Se você não tiver feito o logout e fechou a aba do navegador, digite na url: http://localhost:8000 para voltar para a
+  página de agendamento.
+
+
