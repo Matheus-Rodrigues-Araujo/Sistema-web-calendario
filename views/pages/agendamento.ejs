@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendamentos</title>
+    <link rel="stylesheet" href="/CSS/agendamento.css" />
+    <link rel="stylesheet" href="/fullcalendar/lib/main.css" />
+    <script src="/fullcalendar/lib/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/" title="Sistema de Agendamento">Sistema de <em>Agendamento</em></a>
+        <ul>
+          <li><a href="#" title="Sobre">Sobre</a></li>
+          <li><a href="#" title="Ajuda">Ajuda</a></li>
+          <li class="user-icon" title="Perfil">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li title="Logout" ><a href="/logout" class="logout-link">X</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Will receive a object through ejs -->
+      <h3 style="text-align: center;"> Olá, <%= user %></h3>
+      <div class="data-box" id="new-data">
+        <div>
+          <h2>Evento</h2>
+          <label for="evento">Descrição do Evento</label>
+          <input type="text" name="event" id="event" autofocus />
+        </div>
+
+        <div>
+          <label for="day">Data Selecionada</label>
+          <input type="text" name="date" id="date"/>
+        </div>
+
+        <div>
+          <label for="start">Hora de início</label>
+          <input type="text" name="start" id="start" />
+        </div>
+
+        <div>
+          <label for="end">Hora de término</label>
+          <input type="text" name="end" id="end" />
+        </div>
+
+        <button class="save" id="save-event-btn">Salvar evento</button>
+        <button class="delete" id="delete-event-btn">Não salvar</button>
+      </div>
+      <!-- This div will display the calendar -->
+      <div id="calendar"></div>
+      <div class="cards">
+        <h2>Meus Eventos</h4>
+        <ul class="events-list"></ul>
+      </div>
+    </main>
+    <script src="/SCRIPTS/agendamento.js"></script>
+  </body>
+</html>
