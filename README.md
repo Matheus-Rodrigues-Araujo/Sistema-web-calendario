@@ -1,10 +1,5 @@
 # Sistema-web-calendario
 
-####### OBS
-
-* Projeto em desenvolvimento....
-* A imagem utilizada foi somente para esse projeto, que não visa nenhum lucro
-
 ![Web_calendario1](https://user-images.githubusercontent.com/68081476/176588363-233c8b98-8316-4e10-bb68-0eb39be7bd4e.png)
 # Sobre
 
